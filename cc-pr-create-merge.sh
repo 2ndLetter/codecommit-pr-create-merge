@@ -1,5 +1,7 @@
 #!/bin/bash -ex
 
+# This script creates/merges a PR for the current directory's repository
+
 TOKEN=$(date "+%Y%m%d%H%M%S")
 REPO=$(basename $(git remote get-url origin))
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
