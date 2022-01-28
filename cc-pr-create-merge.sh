@@ -5,7 +5,6 @@ REPO=$(basename $(git remote get-url origin))
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 echo "Creating Pull Request"
-
 aws codecommit create-pull-request \
     --title "Scripted Pull Request Creation $TOKEN" \
     --description "scripted PR creation" \
