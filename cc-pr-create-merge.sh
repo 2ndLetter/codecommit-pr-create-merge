@@ -4,7 +4,7 @@
 
 # Push changes to origin
 git add .
-git commit -a -m "pushing changes for testing"
+git commit -m "pushing changes for testing"
 git push
 
 # Creates/merges a PR for the current directly's repository
