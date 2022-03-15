@@ -2,6 +2,12 @@
 
 # This script creates/merges a PR for the current directory's repository
 
+# Push changes to origin
+git add .
+git commit -a -m "pushing changes for testing"
+git push
+
+# Creates/merges a PR for the current directly's repository
 TOKEN=$(date "+%Y%m%d%H%M%S")
 REPO=$(basename $(git remote get-url origin))
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -26,3 +32,4 @@ aws codecommit merge-pull-request-by-fast-forward \
     --pull-request-id $PR_ID \
     --repository-name $REPO
 
+echo "Script completed successfully!"
